@@ -2,7 +2,6 @@ let styleStorage = new LocalStorageManager();
 let styles = ["default", "James_People"];
 let styleNames = ["Default", "James's People"];
 let styleText = [true, false];
-styleIndex = styleStorage.getGameStyle() || 0;
 
 function setNextStyle() {
   styleIndex = Math.abs((styleIndex + 1) % styles.length);
