@@ -1,6 +1,7 @@
 let styles = ["default", "James_People"];
 let styleNames = ["Default", "James's People"]
 let styleIndex = 0;
+let textShown = true;
 
 function setNextStyle() {
   styleIndex = Math.abs((styleIndex + 1) % styles.length);
