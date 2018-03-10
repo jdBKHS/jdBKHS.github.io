@@ -1,10 +1,12 @@
 let styles = ["default", "James_People"];
+let styleNames = ["Default", "James's People"]
 let styleIndex = 0;
 
 function setNextStyle() {
   styleIndex = Math.abs((styleIndex + 1) % styles.length);
   changeCSS("style/" + styles[styleIndex] + "/style.css");
   console.log(styleIndex, styles[styleIndex]);
+  updatePreview();
 }
 
 function setLastStyle() {
@@ -12,6 +14,7 @@ function setLastStyle() {
   styleIndex = Math.abs((styleIndex - 1) % styles.length);
   changeCSS("style/" + styles[styleIndex] + "/style.css");
   console.log(styleIndex, styles[styleIndex]);
+  updatePreview();
 }
 
 function toggleText() {
@@ -19,7 +22,7 @@ function toggleText() {
 }
 
 function updatePreview() {
-  document.getElementById("sel-text").innerHTML = styles[styleIndex];
+  document.getElementById("sel-text").innerHTML = styleNames[styleIndex].replace(/_/g, " ");
 }
 
 function changeCSS(cssFile) {
