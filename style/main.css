@@ -95,10 +95,6 @@ h1.title {
 .best-container:after {
   content: "Best"; }
 
-#btn-container p {
-  line-height: 45px;
-}
-
 p {
   margin-top: 0;
   margin-bottom: 10px;
@@ -482,7 +478,6 @@ hr {
 }
 
 .sel-button {
-  display: inline-block;
   background: #8f7a66;
   border-radius: 3px;
   padding: 0 20px;
@@ -493,7 +488,6 @@ hr {
   display: block;
   text-align: center;
   font-weight: bold;
-  float: right;
   }
 
 .game-explanation {
