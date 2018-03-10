@@ -8,7 +8,7 @@ document.styleSheets[2].disabled = true;
 function setNextStyle() {
   styleIndex = Math.abs((styleIndex + 1) % styles.length);
   changeCSS("style/" + styles[styleIndex] + "/style.css");
-  document.styleSheets[2].disabled = styleNoText[styleIndex]
+  document.styleSheets[2].disabled = styleText[styleIndex]
   console.log(styleIndex, styles[styleIndex]);
   updatePreview();
 }
@@ -17,7 +17,7 @@ function setLastStyle() {
   console.log("Last");
   styleIndex = Math.abs((styleIndex - 1) % styles.length);
   changeCSS("style/" + styles[styleIndex] + "/style.css");
-  document.styleSheets[2].disabled = styleNoText[styleIndex]
+  document.styleSheets[2].disabled = styleText[styleIndex]
   console.log(styleIndex, styles[styleIndex]);
   updatePreview();
 }
