@@ -1,7 +1,8 @@
+let styleStorage = new LocalStorageManager();
 let styles = ["default", "James_People"];
 let styleNames = ["Default", "James's People"];
 let styleText = [true, false];
-// let styleIndex = 0;
+styleIndex = styleStorage.getGameStyle() || 0;
 
 document.styleSheets[2].disabled = true;
 
@@ -22,6 +23,7 @@ function toggleText() {
 }
 
 function setStyle(style) {
+  styleStorage.setGameStyle(styleIndex);
   changeCSS("style/" + styles[style] + "/style.css");
   updatePreview();
   document.styleSheets[2].disabled = styleText[style];
