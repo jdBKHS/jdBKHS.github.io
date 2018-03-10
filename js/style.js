@@ -1,7 +1,9 @@
 let styles = ["default", "James_People"];
 let styleNames = ["Default", "James's People"];
-let styleNoText = [false, true];
+let styleText = [true, false];
 let styleIndex = 0;
+
+document.styleSheets[2].disabled = true;
 
 function setNextStyle() {
   styleIndex = Math.abs((styleIndex + 1) % styles.length);
