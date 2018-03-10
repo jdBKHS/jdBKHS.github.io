@@ -7,25 +7,25 @@ document.styleSheets[2].disabled = true;
 
 function setNextStyle() {
   styleIndex = Math.abs((styleIndex + 1) % styles.length);
-  changeCSS("style/" + styles[styleIndex] + "/style.css");
-  updatePreview();
-  document.styleSheets[2].disabled = styleText[styleIndex];
-  console.log(styleIndex, styles[styleIndex]);
+  setStyle(styleIndex);
 }
 
 function setLastStyle() {
-  console.log("Last");
   styleIndex = Math.abs((styleIndex - 1) % styles.length);
-  changeCSS("style/" + styles[styleIndex] + "/style.css");
-  updatePreview();
-  document.styleSheets[2].disabled = styleText[styleIndex];
-  console.log(styleIndex, styles[styleIndex]);
+  setStyle(styleIndex);
 }
 
 function toggleText() {
   document.styleSheets[2].disabled = !document.styleSheets[2].disabled;
   styleText[styleIndex] = !styleText[styleIndex];;
   console.log("Text");
+}
+
+function setStyle(style) {
+  changeCSS("style/" + styles[style] + "/style.css");
+  updatePreview();
+  document.styleSheets[2].disabled = styleText[style];
+  console.log(styleIndex, styles[style]);
 }
 
 function updatePreview() {
