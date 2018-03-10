@@ -20,7 +20,7 @@ function setLastStyle() {
 
 function toggleText() {
   if (textShown) {
-		addCss('style/no-text.css');
+		addCSS('style/no-text.css');
 		textShown = false;
 	} else {
 		console.log("disable");
@@ -41,7 +41,7 @@ function updatePreview() {
   }
 }
 
-function addCss(fileName) {
+function addCSS(fileName) {
 
   var head = document.head;
   var link = document.createElement("link");
