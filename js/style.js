@@ -1,7 +1,7 @@
 let styleStorage = new LocalStorageManager();
-let styles = ["default", "James_People"];
-let styleNames = ["Default", "James's People"];
-let styleText = [true, false];
+let styles = ["default", "James_People", "states"];
+let styleNames = ["Default", "James's People", "BK Theatre States];
+let styleText = [true, false, false];
 
 function setNextStyle() {
   styleIndex = Math.abs((styleIndex + 1) % styles.length);
