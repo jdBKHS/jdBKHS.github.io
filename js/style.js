@@ -19,6 +19,13 @@ function setLastStyle() {
 }
 
 function toggleText() {
+  if (textShown) {
+		addCss('style/no-text.css');
+		textShown = false;
+	} else {
+		console.log("disable");
+		textShown = true;
+	}
   console.log("Text");
 }
 
@@ -32,6 +39,18 @@ function updatePreview() {
     var newLink = "style/" + styles[styleIndex] + "/" + Math.pow(2, i + 7) + ".jpeg";
     document.getElementById("sel-btm").children[i].src = newLink;
   }
+}
+
+function addCss(fileName) {
+
+  var head = document.head;
+  var link = document.createElement("link");
+
+  link.type = "text/css";
+  link.rel = "stylesheet";
+  link.href = fileName;
+
+  head.appendChild(link);
 }
 
 function changeCSS(cssFile) {
