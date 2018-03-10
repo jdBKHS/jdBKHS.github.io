@@ -1,10 +1,12 @@
 let styles = ["default", "James_People"];
-let styleNames = ["Default", "James's People"]
+let styleNames = ["Default", "James's People"];
+let styleNoText = [false, true];
 let styleIndex = 0;
 
 function setNextStyle() {
   styleIndex = Math.abs((styleIndex + 1) % styles.length);
   changeCSS("style/" + styles[styleIndex] + "/style.css");
+  document.styleSheets[2].disabled = styleNoText[styleIndex]
   console.log(styleIndex, styles[styleIndex]);
   updatePreview();
 }
@@ -13,6 +15,7 @@ function setLastStyle() {
   console.log("Last");
   styleIndex = Math.abs((styleIndex - 1) % styles.length);
   changeCSS("style/" + styles[styleIndex] + "/style.css");
+  document.styleSheets[2].disabled = styleNoText[styleIndex]
   console.log(styleIndex, styles[styleIndex]);
   updatePreview();
 }
