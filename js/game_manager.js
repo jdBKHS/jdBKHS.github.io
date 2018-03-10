@@ -1,3 +1,5 @@
+let styleIndex;
+
 function GameManager(size, InputManager, Actuator, StorageManager) {
   this.size           = size; // Size of the grid
   this.inputManager   = new InputManager;
@@ -34,7 +36,9 @@ GameManager.prototype.isGameTerminated = function () {
 // Set up the game
 GameManager.prototype.setup = function () {
   var previousState = this.storageManager.getGameState();
-
+  
+  styleIndex = this.storageManager.getGameStyle() || 0;
+  
   // Reload the game from a previous game if present
   if (previousState) {
     this.grid        = new Grid(previousState.grid.size,
@@ -80,6 +84,8 @@ GameManager.prototype.actuate = function () {
   if (this.storageManager.getBestScore() < this.score) {
     this.storageManager.setBestScore(this.score);
   }
+  
+  this.storageManager.setGameStyle(styleIndex);
 
   // Clear the state when the game is over (game over only, not win)
   if (this.over) {
