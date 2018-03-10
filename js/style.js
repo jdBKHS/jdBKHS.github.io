@@ -23,6 +23,14 @@ function toggleText() {
 
 function updatePreview() {
   document.getElementById("sel-text").innerHTML = styleNames[styleIndex].replace(/_/g, " ");
+  for (var i = 0; i < 6; i ++) {
+	var newLink = "style/" + styles[styleIndex] + "/" + Math.pow(2, i + 1) + ".jpeg";
+	document.getElementById("sel-top").children[i].src = newLink;
+  }
+  for (var i = 0; i < 5; i ++) {
+    var newLink = "style/" + styles[styleIndex] + "/" + Math.pow(2, i + 7) + ".jpeg";
+    document.getElementById("sel-btm").children[i].src = newLink;
+  }
 }
 
 function changeCSS(cssFile) {
