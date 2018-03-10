@@ -1,17 +1,17 @@
-const styles = ["Default", "James_People"];
+let styles = ["default", "James_People"];
 let styleIndex = 0;
 
 function setNextStyle() {
-  styleIndex = (styleIndex + 1) % styles.length;
+  styleIndex = Math.abs((styleIndex + 1) % styles.length);
   changeCSS("style/" + styles[styleIndex] + "/style.css");
-  console.log("Next");
+  console.log(styleIndex, styles[styleIndex]);
 }
 
 function setLastStyle() {
   console.log("Last");
-  styleIndex = (styleIndex - 1) % styles.length;
+  styleIndex = Math.abs((styleIndex - 1) % styles.length);
   changeCSS("style/" + styles[styleIndex] + "/style.css");
-  console.log("Next");
+  console.log(styleIndex, styles[styleIndex]);
 }
 
 function toggleText() {
