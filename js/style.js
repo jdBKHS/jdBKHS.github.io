@@ -6,14 +6,15 @@ let styleIndex = 0;
 document.styleSheets[2].disabled = true;
 
 function setNextStyle() {
+  updatePreview();
   styleIndex = Math.abs((styleIndex + 1) % styles.length);
   changeCSS("style/" + styles[styleIndex] + "/style.css");
   document.styleSheets[2].disabled = styleText[styleIndex];
   console.log(styleIndex, styles[styleIndex]);
-  updatePreview();
 }
 
 function setLastStyle() {
+  updatePreview();
   console.log("Last");
   styleIndex = Math.abs((styleIndex - 1) % styles.length);
   changeCSS("style/" + styles[styleIndex] + "/style.css");
