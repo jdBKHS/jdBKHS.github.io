@@ -1,6 +1,6 @@
 let styleStorage = new LocalStorageManager();
 let styles = ["default", "James_People", "states"];
-let styleNames = ["Default", "James's People", "BK Theatre States];
+let styleNames = ["Default", "James's People", "BK Theatre States"];
 let styleText = [true, false, false];
 
 function setNextStyle() {
