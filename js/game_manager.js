@@ -56,6 +56,10 @@ GameManager.prototype.setup = function () {
 
   // Update the actuator
   this.actuate();
+  
+  //Set the Style
+  styleIndex = this.storageManager.getGameStyle() || 0;
+  setStyle(styleIndex);
 };
 
 // Set up the initial tiles to start the game with
