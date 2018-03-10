@@ -20,7 +20,6 @@ function setLastStyle() {
   updatePreview();
   document.styleSheets[2].disabled = styleText[styleIndex];
   console.log(styleIndex, styles[styleIndex]);
-  updatePreview();
 }
 
 function toggleText() {
