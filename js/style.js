@@ -7,3 +7,7 @@ function setNextStyle() {
 function setLastStyle() {
   console.log("Last");
 }
+
+function toggleText() {
+  console.log("Text");
+}
