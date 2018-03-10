@@ -1,7 +1,6 @@
 let styles = ["default", "James_People"];
 let styleNames = ["Default", "James's People"]
 let styleIndex = 0;
-let textShown = true;
 
 function setNextStyle() {
   styleIndex = Math.abs((styleIndex + 1) % styles.length);
@@ -19,13 +18,7 @@ function setLastStyle() {
 }
 
 function toggleText() {
-  if (textShown) {
-		addCSS('style/no-text.css');
-		textShown = false;
-	} else {
-		console.log("disable");
-		textShown = true;
-	}
+  document.styleSheets[2].disabled = !document.styleSheets[2].disabled
   console.log("Text");
 }
 
@@ -39,18 +32,6 @@ function updatePreview() {
     var newLink = "style/" + styles[styleIndex] + "/" + Math.pow(2, i + 7) + ".jpeg";
     document.getElementById("sel-btm").children[i].src = newLink;
   }
-}
-
-function addCSS(fileName) {
-
-  var head = document.head;
-  var link = document.createElement("link");
-
-  link.type = "text/css";
-  link.rel = "stylesheet";
-  link.href = fileName;
-
-  head.appendChild(link);
 }
 
 function changeCSS(cssFile) {
