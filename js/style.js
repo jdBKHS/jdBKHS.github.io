@@ -4,7 +4,7 @@ let styleNames = ["Default", "James's People"];
 let styleText = [true, false];
 styleIndex = styleStorage.getGameStyle() || 0;
 
-document.styleSheets[2].disabled = true;
+setStyle(styleIndex);
 
 function setNextStyle() {
   styleIndex = Math.abs((styleIndex + 1) % styles.length);
