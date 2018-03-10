@@ -1,7 +1,7 @@
 let styles = ["default", "James_People"];
 let styleNames = ["Default", "James's People"];
 let styleText = [true, false];
-let styleIndex = 0;
+// let styleIndex = 0;
 
 document.styleSheets[2].disabled = true;
 
