@@ -18,6 +18,10 @@ function toggleText() {
   console.log("Text");
 }
 
+function updatePreview() {
+  document.getElementById("sel-text").innerHTML = styles[styleIndex];
+}
+
 function changeCSS(cssFile) {
     var oldlink = document.getElementsByTagName("link").item(1);
   
