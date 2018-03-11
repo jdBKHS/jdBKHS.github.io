@@ -28,7 +28,7 @@ function setStyle(style) {
 }
 
 function updatePreview() {
-  document.getElementById("sel-text").innerHTML = styleNames[styleIndex].replace(/_/g, " ");
+  document.getElementById("sel-text").innerHTML = styleNames[styleIndex].replace(/_/g, " ") + "▼";
   for (var i = 0; i < 6; i ++) {
 	var newLink = "style/" + styles[styleIndex] + "/" + Math.pow(2, i + 1) + ".jpeg";
 	document.getElementById("sel-top").children[i].src = newLink;
