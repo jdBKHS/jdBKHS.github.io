@@ -1,6 +1,6 @@
 let styleStorage = new LocalStorageManager();
-let styles = ["default", "China"];
-let styleNames = ["Classic 2048", "Chinese Dynasties"];
+let styles = ["default", "China", "James_People"];
+let styleNames = ["Classic 2048", "Chinese Dynasties", "People!"];
 let styleText = [true, false, false, false];
 
 function setNextStyle() {
