@@ -4,12 +4,14 @@ let styleNames = ["Classic 2048", "Chinese Dynasties", "People!"];
 let styleText = [true, false, false, false];
 
 function setNextStyle() {
-  styleIndex = Math.abs((styleIndex + 1) % styles.length);
+  styleIndex++;
+  if (styleIndex > styles.length - 1) styleIndex = 0;
   setStyle(styleIndex);
 }
 
 function setLastStyle() {
-  styleIndex = Math.abs((styleIndex - 1) % styles.length);
+  styleIndex--;
+  if (styleIndex < 0) styleIndex = styles.length - 1;
   setStyle(styleIndex);
 }
 
